@@ -38,6 +38,12 @@ const TreeMenuItem: React.FC<TreeMenuItemProps> = ({
 
   function onClick() {
     const { pathname, query } = router;
+    console.log('====================================');
+    console.log('PATHNAME', pathname);
+    console.log('====================================');
+    console.log('====================================');
+    console.log('query', query);
+    console.log('====================================');
     const navigate = () =>
       router.push(
         {

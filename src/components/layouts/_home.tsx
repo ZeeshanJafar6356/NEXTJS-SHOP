@@ -17,7 +17,7 @@ export default function HomeLayout({
     displayMobileHeaderSearchAtom
   );
   return (
-    <div className="flex flex-col min-h-screen transition-colors duration-150 bg-gray-100">
+    <div className="flex min-h-screen flex-col bg-gray-100 transition-colors duration-150">
       {['minimal', 'compact'].includes(layout) ? (
         <HeaderMinimal layout={layout} />
       ) : (
@@ -29,7 +29,7 @@ export default function HomeLayout({
         <motion.button
           whileTap={{ scale: 0.88 }}
           onClick={() => setDisplayMobileHeaderSearch((prev) => !prev)}
-          className="flex items-center justify-center h-full p-2 focus:outline-none focus:text-accent"
+          className="flex h-full items-center justify-center p-2 focus:text-accent focus:outline-none"
         >
           <span className="sr-only">{t('text-search')}</span>
           <SearchIcon width="17.05" height="18" />

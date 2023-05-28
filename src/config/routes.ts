@@ -16,13 +16,14 @@ export const Routes = {
   products: '/products',
   product: (slug: string) => {
     // if (asPath) {
-    //   return `/products/${encodeURIComponent(slug)}?type=${asPath}`;  
+    //   return `/products/${encodeURIComponent(slug)}?type=${asPath}`;
     // }
     return `/products/${encodeURIComponent(slug)}`;
   },
   privacy: '/privacy',
   terms: '/terms',
   contactUs: '/contact',
+  about: '/about-us',
   shops: '/shops',
   cards: '/cards',
   shop: (slug: string) => `/shops/${encodeURIComponent(slug)}`,

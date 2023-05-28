@@ -26,9 +26,14 @@ const GroupsMenu: React.FC<GroupsMenuProps> = ({
   defaultGroup,
   variant = 'colored',
 }) => {
+  console.log('GROUPS', groups);
+
   const router = useRouter();
   const selectedMenu =
     groups?.find((type) => router.asPath.includes(type?.slug)) ?? defaultGroup;
+  console.log('====================================');
+  console.log('SELECTED MENU', selectedMenu);
+  console.log('====================================');
   return (
     <Menu
       as="div"

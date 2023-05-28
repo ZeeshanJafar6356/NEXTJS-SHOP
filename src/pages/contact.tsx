@@ -38,14 +38,17 @@ export const ContactPage = () => {
                   ? formatAddress(settings?.contactDetails?.location)
                   : t('common:text-no-address')}
               </span> */}
-              <span className="text-sm text-body">Pakistan</span>
+              <span className="text-sm text-body">
+                Digbeth Court Business Centre, 162-164 High St, Birmingham, B12
+                0LD
+              </span>
             </div>
 
             <div className="mb-8 flex flex-col">
               <span className="mb-3 font-semibold text-heading">
                 {t('text-phone')}
               </span>
-              <span className="text-sm text-body">+92 55-3893192</span>
+              <span className="text-sm text-body"> 0121 340 5800</span>
               {/* <span className="text-sm text-body">
                 {settings?.contactDetails?.contact
                   ? settings?.contactDetails?.contact
@@ -61,7 +64,7 @@ export const ContactPage = () => {
                   {/* <span className="text-sm text-body">
                     {settings?.contactDetails?.website}
                   </span> */}
-                  <span>Hixol Pvt Ltd</span>
+                  <span>info@delivercart.co.uk</span>
                   <a
                     href="https://www.hixol.com/"
                     target="_blank"

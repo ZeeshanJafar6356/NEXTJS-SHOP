@@ -32,11 +32,11 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
     <>
       <div
         className={cn(
-          'flex items-center lg:hidden w-full bg-light border-b border-gray-300 py-4 px-6 sticky top-[55px] z-10',
+          'sticky top-[55px] z-10 flex w-full items-center border-b border-gray-300 bg-light py-4 px-6 lg:hidden',
           cardClassName
         )}
       >
-        <div className="relative w-16 h-16 mx-auto overflow-hidden bg-gray-200 border border-gray-100 rounded-lg ltr:mr-4 rtl:ml-4 shrink-0">
+        <div className="relative mx-auto h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-gray-100 bg-gray-200 ltr:mr-4 rtl:ml-4">
           <Image
             alt={t('logo')}
             src={shop?.logo?.original! ?? productPlaceholder}
@@ -49,7 +49,7 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
           <h3 className="text-base font-semibold text-heading">{shop.name}</h3>
 
           <button
-            className="text-sm font-semibold transition text-accent hover:text-accent-hover"
+            className="text-sm font-semibold text-accent transition hover:text-accent-hover"
             onClick={handleMoreInfoModal}
           >
             {t('text-more-info')}
@@ -59,14 +59,14 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
 
       <aside
         className={cn(
-          'bg-light md:rounded h-full w-full lg:w-80 2xl:w-96 hidden lg:block',
+          'hidden h-full w-full bg-light md:rounded lg:block lg:w-80 2xl:w-96',
           className
         )}
       >
         <div className="max-h-full overflow-hidden">
           <Scrollbar className={cn('w-full', 'scrollbar_height')}>
-            <div className="flex flex-col items-center w-full border-b border-gray-200 p-7">
-              <div className="relative mx-auto mb-8 overflow-hidden bg-gray-200 border border-gray-100 rounded-lg w-44 h-44">
+            <div className="flex w-full flex-col items-center border-b border-gray-200 p-7">
+              <div className="relative mx-auto mb-8 h-44 w-44 overflow-hidden rounded-lg border border-gray-100 bg-gray-200">
                 <Image
                   alt={t('logo')}
                   src={shop?.logo?.original! ?? productPlaceholder}
@@ -80,18 +80,18 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
               </h3>
 
               {shop?.description && (
-                <p className="mb-2 text-sm leading-relaxed text-center text-body">
+                <p className="mb-2 text-center text-sm leading-relaxed text-body">
                   <ReadMore character={70}>{shop.description}</ReadMore>
                 </p>
               )}
 
-              <div className="flex items-center justify-start mt-3">
+              <div className="mt-3 flex items-center justify-start">
                 {shop?.settings?.socials?.map((item: any, index: number) => (
                   <a
                     key={index}
                     href={item.url}
                     target="_blank"
-                    className={`text-muted focus:outline-none ltr:mr-6 rtl:ml-6 ltr:last:mr-0 rtl:last:ml-0 transition-colors duration-300 hover:${item.hoverClass}`}
+                    className={`text-muted transition-colors duration-300 focus:outline-none ltr:mr-6 ltr:last:mr-0 rtl:ml-6 rtl:last:ml-0 hover:${item.hoverClass}`}
                     rel="noreferrer"
                   >
                     {getIcon({
@@ -105,7 +105,7 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
             </div>
 
             <div className="p-7">
-              <div className="flex flex-col mb-7 last:mb-0">
+              <div className="mb-7 flex flex-col last:mb-0">
                 <span className="mb-2 text-sm font-semibold text-heading">
                   {t('text-address')}
                 </span>
@@ -116,7 +116,7 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
                 </span>
               </div>
 
-              <div className="flex flex-col mb-7 last:mb-0">
+              <div className="mb-7 flex flex-col last:mb-0">
                 <span className="mb-2 text-sm font-semibold text-heading">
                   {t('text-phone')}
                 </span>
@@ -140,7 +140,7 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
                     <a
                       href={shop.settings.website}
                       target="_blank"
-                      className="text-sm font-semibold text-accent hover:text-accent-hover focus:outline-none focus:text-accent-hover"
+                      className="text-sm font-semibold text-accent hover:text-accent-hover focus:text-accent-hover focus:outline-none"
                       rel="noreferrer"
                     >
                       {t('text-visit-site')}

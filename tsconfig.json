@@ -22,6 +22,6 @@
     },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/about-us.js"],
   "exclude": ["__generated__", "node_modules", "src/framework/graphql"]
 }

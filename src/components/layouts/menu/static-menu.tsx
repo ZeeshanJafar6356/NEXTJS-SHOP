@@ -7,6 +7,7 @@ const headerLinks = [
   { href: Routes.coupons, icon: null, label: 'nav-menu-offer' },
   { href: Routes.help, label: 'nav-menu-faq' },
   { href: Routes.contactUs, label: 'nav-menu-contact' },
+  { href: Routes.about, label: 'About' },
 ];
 
 const StaticMenu = () => {

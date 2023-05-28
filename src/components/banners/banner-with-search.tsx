@@ -14,6 +14,7 @@ interface BannerProps {
 }
 
 const BannerWithSearch: React.FC<BannerProps> = ({ banners, layout }) => {
+  console.log('BANNERS', banners);
   const { showHeaderSearch, hideHeaderSearch } = useHeaderSearch();
   const intersectionRef = useRef(null);
   const intersection = useIntersection(intersectionRef, {
@@ -38,6 +39,15 @@ const BannerWithSearch: React.FC<BannerProps> = ({ banners, layout }) => {
         '!block': layout === 'minimal',
       })}
     >
+      <video
+        id="bannervideo"
+        // width: '70%', height: '70%',
+        style={{ margin: 'auto', display: 'flex' }}
+        autoPlay
+        loop
+      >
+        <source src="https://delivercart.co.uk/admin/uploads/profile/DeliverCartHomepage-new.mp4" />
+      </video>
       <div className="-z-1 overflow-hidden">
         <div className="relative">
           <Swiper
@@ -94,14 +104,6 @@ const BannerWithSearch: React.FC<BannerProps> = ({ banners, layout }) => {
           </Swiper>
         </div>
       </div>
-      {/* <video
-        id="bannervideo"
-        style={{ width: '70%', height: '70%', margin: 'auto', display: 'flex' }}
-        autoPlay
-        loop
-      >
-        <source src="https://delivercart.co.uk/admin/uploads/profile/DeliverCartHomepage-new.mp4" />
-      </video> */}
     </div>
   );
 };
